@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bar Model App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <a id="menu-toggle" class="btn btn-primary btn-lg toggle"> <i class="fa fa-bars" data-toggle="tooltip" title="Side ToolBox"></i></a>
+    <div id="sidebar-wrapper">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle">
+            <!-- <i class="fa fa-times" style="color:white;"></i> -->
+            <image src = "./assets/images/close-btn.png" data-toggle="tooltip" title="Close"></image>
+        </a>
+        <ul class="sidebar-nav">
+        <li>
+            <image id = "sweets" class = "sticker" src = "./assets/images/i_sweets.png" data-toggle="tooltip" title="Sticker" style="position:relative;"></image>
+            <image id = "cherrycake1" class = "sticker" src = "./assets/images/i_cherry.png" data-toggle="tooltip" title="Sticker" style="position:relative;"></image>
+            <image id = "yellowCar" class = "sticker" src = "./assets/images/i_yellow_car.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "blueCar" class = "sticker" src = "./assets/images/i_blue_car.png" data-toggle="tooltip" title="Sticker" style="margin-left:10px;"></image>
+        </li>
+        <li>
+            <image id = "cupcake" class = "sticker" src = "./assets/images/i_cupCake.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_bigger" class = "sticker" src = "./assets/images/i_st_bigger.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_smaller" class = "sticker" src = "./assets/images/i_st_smaller.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_biggerequal" class = "sticker" src = "./assets/images/i_st_biggerequal.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_smallerequal" class = "sticker" src = "./assets/images/i_st_smallerequal.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_equal" class = "sticker" src = "./assets/images/i_st_equal.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_notequal" class = "sticker" src = "./assets/images/i_st_notequal.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "redquestion" class = "sticker" src = "./assets/images/i_red_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+            <image id = "logoclrquestion" class = "sticker" src = "./assets/images/i_logocolor_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+            <image id = "fraction" class = "sticker" src = "./assets/images/i_fraction.png" data-toggle="tooltip" title="Fraction"></image>
+        </li>
+        <li>           
+            <image id = "question" class = "sticker" src = "./assets/images/i_grey_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+            <image id = "st_one" class = "sticker" src = "./assets/images/i_st_one.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_minusone" class = "sticker" src = "./assets/images/i_st_minusone.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_x" class = "sticker left" src = "./assets/images/i_st_x.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-x" class = "sticker right" src = "./assets/images/i_st_-x.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_y" class = "sticker left" src = "./assets/images/i_st_y.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-y" class = "sticker right" src = "./assets/images/i_st_-y.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_xpower" class = "sticker left" src = "./assets/images/i_st_xpower.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-xpower" class = "sticker right" src = "./assets/images/i_st_-xpower.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_ypower" class = "sticker left" src = "./assets/images/i_st_ypower.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-ypower" class = "sticker right" src = "./assets/images/i_st_-ypower.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_xy" class = "sticker left" src = "./assets/images/i_st_xy.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-xy" class = "sticker right" src = "./assets/images/i_st_-xy.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+
+        </ul>
+    </div>
+    <div id="pencilToolBox">
+        <div id="mydivheader">ToolBox</div>
+        <div id = "eraser" class = "tool" data-tool = "eraser" data-toggle="tooltip" title="Eraser"></div><br/>
+        <div id = "pencilEraser" data-tool = "pencilEraser" data-toggle="tooltip" title="Erase all drawings"></div><br/>
+        <div id = "undo" data-tool = "undo" data-toggle="tooltip" title="Undo"></div><br/>
+        <div id = "redo" data-tool = "redo" data-toggle="tooltip" title="Redo"></div><br/>
+        <div id = "hideToolbar" data-tool = "cross" data-toggle="tooltip" title="Close the toolbox"></div>
+    </div>
+    <canvas id="myCanvas" style="position:absolute; left:0px; top:0px;"></canvas>
+        <image id = "logo" src = "./assets/images/logo.png"></image>
+        <div style="position:absolute;left:100px;top:100px;width:60px;" id = "fract">
+        </div>
+
+    <menu id = "bottom-toolbar">
+            <div id= "restart" class = "toolImg tool" data-toggle="tooltip" title="Refresh"></div>
+            <div id = "cutBar" class = "toolImg tool" data-tool = "saw" data-toggle="tooltip" title="Cut the bar"></div>
+            <div id = "scissors" class = "toolImg tool" data-tool = "scissors" data-toggle="tooltip" title="Detach the bar"></div>
+            <div id = "detach" class = "toolImg tool" data-tool = "detach" data-toggle="tooltip" title="Detach every part"></div>
+            <div id = "dustbin" class = "toolImg" data-tool = "dustbin" data-toggle="tooltip" title="Dustbin"></div>
+            <div id = "paint" class = "toolImg tool" data-tool = "paint" data-toggle="tooltip" title="Paint the bar"></div>
+            <div id = "copy" class = "toolImg" data-tool = "copy" data-toggle="tooltip" title="Copy the bar"></div>
+            <div id = "abc" class = "toolImg" data-tool = "abc" data-toggle="tooltip" title="Type questions"></div>
+            <div id = "pencil" class = "toolImg tool" data-tool = "pencil" data-toggle="tooltip" title="Pencil"></div>
+            <div id = "addBar" class = "toolImg tool" data-tool = "bar" data-toggle="tooltip" title="Bar"></div>
+            <div id = "horizontalarrow" class = "toolImg tool" data-toggle="tooltip" title="Horizontal arrow"></div>
+            <div id = "upperdownarrow" class = "toolImg tool" data-toggle="tooltip" title="Vertical arrow"></div>
+            <div id = "dottedupperdownarrow" class = "toolImg tool" data-toggle="tooltip" title="Dotted Vertical arrow"></div>
+            <div id = "dottedSquare" class = "toolImg tool" data-toggle="tooltip" title="Select Area"></div>                 
+            <div id = "clrGroup">
+                <div class="row" style="height: 70%;">
+                        <div class="col-sm-3 col-md-3 col-lg-3" style="text-align: right;">
+                            <button id = "colorPicker" class="jscolor {valueElement:'valueInput', styleElement:'styleInput'}" title="Colorpicker" style="background-color:transparent;"></button>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                            <image id = "redPencil" class = "clr" data-clr = "#53CFF9" src = "./assets/images/pink.png" data-toggle="tooltip" title="Color pencil"></image>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                            <image id = "bluePencil" class = "clr" data-clr = "#4CD47F" src = "./assets/images/green.png" data-toggle="tooltip" title="Color pencil"></image>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                            <image id = "greenPencil" class = "clr" data-clr = "#FF9E47" src = "./assets/images/yellow.png" data-toggle="tooltip" title="Color pencil"></image>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                            <image id = "orangePencil" class = "clr" data-clr = "black" src = "./assets/images/black.png" data-toggle="tooltip" title="Color pencil"></image>
+                        </div>
+                </div> 
+                <div id = "clrName"></div> 
+            </div>
+            <div id = "download" class = "toolImg tool" data-toggle="tooltip" title="Download"></div>
+            <div id = "upload" class = "toolImg tool" onclick="document.getElementById('uploadImage').click()" data-toggle="tooltip" title="Upload">
+                <input type="file" id="uploadImage" accept="image/png, image/jpeg" style="visibility: hidden;"></div>
+                <input id="valueInput" value="ff699" style="visibility: hidden;">
+    </menu>
+    <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <textarea id = "text"></textarea>
+            <select id="font-style" name="font">
+                <option>Georgia</option>
+                <option>Palatino Linotype</option>
+                <option>Book Antiqua</option>
+                <option>Times New Roman</option>
+                <option>Arial</option>
+                <option>Helvetica</option>
+                <option>Arial Black</option>
+                <option>Impact</option>
+                <option>Tahoma</option>
+                <option>Verdana</option>
+                <option>Courier New</option>
+                <option>Lucida Console</option>
+            </select>
+            <select id="font-size" name="font-size">
+              <option value="30">Small</option>
+              <option value="50" selected>Medium</option>
+              <option value="70">Large</option>
+            </select>
+            <button id = "confirmBtn">Confirm</button>
+            <button id = "noConfirmBtn" class="popupCloseButton">No</button>
+        </div>
+    </div>
+    <div class="bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <h2 style="color:white;">Start Over?</h2>
+            <br>
+            <h6 style="color:white;">Do you want to restart your work?</h6>
+            <button id = "yesBtn">YES</button>
+            <button id = "noBtn" class="CloseButton">No</button>
+        </div>
+    </div>
+    <div class="bkgr_fricc_copy">
+        <span class="helper"></span>
+        <div>
+            <!-- <div class="CloseButtonCopy">X</div> -->
+            <h3 style="color:white;">Which part to copy?</h6><br/>
+            <div style="color:white; margin-left: -60px;">
+                <input type="radio" id = "wholeBar" name="copy" value="whole" checked="checked" >  Copy whole bar  <br>
+            </div>
+            <div style="color:white;">
+                <input type="radio" id = "partBar" name="copy" value="part">  Copy selected part
+                <input type="number" id = "numberOfParts" value="1" style="width:40px;"><br>
+            </div>
+            <button id = "confirmCopy">Confirm</button>
+            <button id = "noconfirmCopy" class="CloseButtonCopy">No</button>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/jquery.js"></script>
+<script src="./assets/js/popper.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/jscolor.js"></script>
+<script src="./assets/js/html2canvas.js"></script>
+<script src="./assets/js/myscript.js"></script>
+
+</html>
